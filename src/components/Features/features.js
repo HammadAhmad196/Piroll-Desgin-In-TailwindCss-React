@@ -1,7 +1,4 @@
 import React from "react";
-import { BsDiamond } from "react-icons/bs";
-import { FaGamepad, FaLaptopCode, FaMobileAlt, FaRegStar } from "react-icons/fa";
-import { MdFlightTakeoff, MdGames, MdGraphicEq } from "react-icons/md";
 import features from "../../Data/Features";
 
 export const Features = () => {
