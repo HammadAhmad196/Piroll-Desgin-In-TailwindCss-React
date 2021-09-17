@@ -5,7 +5,7 @@ import gallery from "../../Data/Process/gallery";
 
 export const Gallery = () => {
   return (
-    <div className="">
+    <div className="" style={{fontFamily: 'Roboto'}}>
       <div className="grid sm:grid-cols-2 lg:grid-cols-4">
         {
           gallery.map((gallery) => (

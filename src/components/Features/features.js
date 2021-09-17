@@ -6,7 +6,7 @@ import features from "../../Data/Features";
 
 export const Features = () => {
   return (
-    <div className="bg-gray-100 text-gray-400  px-4 py-16 mx-auto md:px-24 lg:px-8 lg:py-20">
+    <div className="bg-gray-100 text-gray-400  px-4 py-16 mx-auto md:px-24 lg:px-8 lg:py-20" id="services" style={{fontFamily: 'Roboto'}}>
       <div className="grid gap-5 row-gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {
           features.map((features) => (

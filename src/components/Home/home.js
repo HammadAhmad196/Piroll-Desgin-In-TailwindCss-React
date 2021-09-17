@@ -4,7 +4,7 @@ import chair from '../../Assets/images/chair.jpg';
 export const Home = () => {
   return (
     <div className="flex h-screen items-center lg:mt-0"
-      style={{ background: `transparent url(${chair}) no-repeat scroll center`, backgroundSize: "cover", backgroundAttachment: 'fixed' }} id="home">
+      style={{ background: `transparent url(${chair}) no-repeat scroll center`, backgroundSize: "cover", fontFamily: 'Roboto', backgroundAttachment: 'fixed' }} id="home">
       <div className="container px-4 mx-auto">
         <div className="flex items-center justify-end">
           <div className="w-full sm:w-1/2 md:w-1/2">

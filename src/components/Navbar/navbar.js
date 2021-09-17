@@ -1,87 +1,97 @@
 import React from "react";
+import { Link } from 'react-scroll';
+import { animateScroll as scroll } from "react-scroll";
 
 export default function Navbar({ fixed }) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
   return (
     <>
-      <nav className="flex items-center justify-between sm:px-2 py-3 bg-gray-200" style={{ fontFamily: 'Roboto' }}>
+      <nav className="fixed flex z-50 w-full items-center justify-between sm:px-2 py-3 bg-gray-200" style={{ fontFamily: 'Roboto' }}>
         <div className="bg-gray-200 container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
-            <a
-              className="text-base leading-relaxed inline-block mr-4 py-2 whitespace-nowrap font-bold"
-              href="#pablo"
+            <Link
+              className="text-base leading-relaxed inline-block mr-4 py-2 graybg-gray-400space-nowrap font-bold cursor-pointer"
+              to="home" smooth={true} duration={1000} onClick={() => scroll.scrollToTop()}
             >
               eVantage
-            </a>
+            </Link>
             <button
-              className=" cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+              className="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
               type="button"
               onClick={() => setNavbarOpen(!navbarOpen)}
             >
               <i className="fas fa-bars"></i>
             </button>
           </div>
-          <div className={ "lg:flex flex-grow items-center" +
-              (navbarOpen ? " flex" : " hidden")
-            }
-            id=""
+
+          <div className={"lg:flex flex-grow items-center" +
+            (navbarOpen ? " flex" : " hidden")
+          }
+            id="example-navbar-warning"
           >
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
               <li className="nav-item">
-                <a
-                  className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug  hover:opacity-75"
-                  href="home"
+                <Link
+                  className="lg:px-3 py-2 flex items-center text-xs uppercase font-bold cursor-pointer"
+                  to="home" smooth={true} duration={1000}
+                  onClick={() => setNavbarOpen(!navbarOpen)}
                 >
-                  <i className="text-lg leading-lg  opacity-75"></i><span className="">Home</span>
-                </a>
+                  <span className="">Home</span>
+                </Link>
               </li>
               <li className="nav-item">
-                <a
-                  className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug  hover:opacity-75"
-                  href="about"
+                <Link
+                  className="lg:px-3 py-2 flex items-center text-xs uppercase font-bold cursor-pointer"
+                  to="about" smooth={true} duration={1000}
+                  onClick={() => setNavbarOpen(!navbarOpen)}
                 >
-                  <i className="text-lg leading-lg  opacity-75"></i><span className="">About</span>
-                </a>
+                  <span className="">About</span>
+                </Link>
               </li>
               <li className="nav-item">
-                <a
-                  className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug  hover:opacity-75"
-                  href="work"
+                <Link
+                  className="lg:px-3 py-2 flex items-center text-xs uppercase font-bold cursor-pointer"
+                  to="work" smooth={true} duration={1000}
+                  onClick={() => setNavbarOpen(!navbarOpen)}
                 >
-                  <i className="text-lg leading-lg  opacity-75"></i><span className="">Work</span>
-                </a>
+                  <span className="">Work</span>
+                </Link>
               </li>
               <li className="nav-item">
-                <a
-                  className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug  hover:opacity-75"
-                  href="process"
+                <Link
+                  className="lg:px-3 py-2 flex items-center text-xs uppercase font-bold cursor-pointer"
+                  to="process" smooth={true} duration={1000}
+                  onClick={() => setNavbarOpen(!navbarOpen)}
                 >
-                  <i className="text-lg leading-lg  opacity-75"></i><span className="">Process</span>
-                </a>
+                  <span className="">Process</span>
+                </Link>
               </li>
               <li className="nav-item">
-                <a
-                  className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug  hover:opacity-75"
-                  href="services"
+                <Link
+                  className="lg:px-3 py-2 flex items-center text-xs uppercase font-bold cursor-pointer"
+                  to="services" smooth={true} duration={1000}
+                  onClick={() => setNavbarOpen(!navbarOpen)}
                 >
-                  <i className="text-lg leading-lg  opacity-75"></i><span className="">Services</span>
-                </a>
+                  <span className="">Services</span>
+                </Link>
               </li>
               <li className="nav-item">
-                <a
-                  className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug  hover:opacity-75"
-                  href="testimonials"
+                <Link
+                  className="lg:px-3 py-2 flex items-center text-xs uppercase font-bold cursor-pointer"
+                  to="testimonials" smooth={true} duration={1000}
+                  onClick={() => setNavbarOpen(!navbarOpen)}
                 >
-                  <i className="text-lg leading-lg  opacity-75"></i><span className="">Testimonials</span>
-                </a>
+                  <span className="">Testimonials</span>
+                </Link>
               </li>
               <li className="nav-item">
-                <a
-                  className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug  hover:opacity-75"
-                  href="contact"
+                <Link
+                  className="lg:px-3 py-2 flex items-center text-xs uppercase font-bold cursor-pointer"
+                  to="contact" smooth={true} duration={1000}
+                  onClick={() => setNavbarOpen(!navbarOpen)}
                 >
-                  <i className="text-lg leading-lg  opacity-75"></i><span className="">Contact</span>
-                </a>
+                  <span className="">Contact</span>
+                </Link>
               </li>
             </ul>
           </div>

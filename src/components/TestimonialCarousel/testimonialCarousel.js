@@ -25,7 +25,7 @@ const TestimonialCarousel = () => {
   };
   return (
     <>
-    <div className="overflow-x-hidden overflow-y-hidden">
+    <div className="overflow-x-hidden overflow-y-hidden" id="testimonials" style={{fontFamily: 'Roboto' }}>
       <Slider {...settings}>
         <section>
           <div className="flex w-full py-24 items-center justify-center flex-col text-white bg-blue-400">

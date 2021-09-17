@@ -4,8 +4,8 @@ import skills from '../../Assets/images/skills.jpg'
 
 function Skills() {
   return (
-       <div className="flex h-screen items-center"
-        style={{ background: `transparent url(${skills}) no-repeat scroll center`, backgroundSize: "cover",  backgroundAttachment: 'fixed' }}>
+       <div className="flex h-screen items-center" id="work"
+        style={{ background: `transparent url(${skills}) no-repeat scroll center`, fontFamily: 'Roboto', backgroundSize: "cover",  backgroundAttachment: 'fixed' }}>
         <div className="container px-4 xl:px-4 md:px-6 sm:px-6 py-16 mx-auto ">
           <div className="flex items-center justify-start">
             <div className="w-full md:w-1/2">

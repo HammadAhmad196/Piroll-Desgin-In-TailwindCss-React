@@ -5,7 +5,7 @@ import { Gallery } from './gallery';
 function Process() {
   return (
     <>
-      <div className="lg:flex flex items-center sm:px-4 lg-px-0 lg:justify-between lg:p-10" style={{ background: '#10C9C3' }}>
+      <div className="lg:flex flex items-center sm:px-4 lg-px-0  lg:justify-between lg:p-10" style={{ background: '#10C9C3', fontFamily: 'Roboto' }}>
         <div className="lg:flex lg:flex-row text-white flex-col lg:gap-16">
           {
             process.map((process) => (
