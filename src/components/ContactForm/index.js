@@ -33,5 +33,4 @@ function index() {
     </div>
   )
 }
-
-export default index
+export default index;
