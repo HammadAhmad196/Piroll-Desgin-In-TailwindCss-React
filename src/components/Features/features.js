@@ -1,10 +1,16 @@
 import React from "react";
 import features from "../../Data/Features";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export const Features = () => {
+  const [viewPortEntered, setViewPortEntered] = React.useState(false);
+  React.useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
   return (
-    <div className="bg-gray-100 text-gray-500  px-4 py-16 mx-auto md:px-24 lg:px-8 lg:py-20" id="services" style={{fontFamily: 'Roboto'}}>
-      <div className="grid gap-5 row-gap-5 sm:grid-cols-2 lg:grid-cols-4">
+    <div className="bg-gray-100 text-gray-500  px-4 py-16 mx-auto md:px-24 lg:px-8 lg:py-20" id="services" style={{ fontFamily: 'Roboto' }}>
+      <div data-aos="fade-down-right" className="grid gap-5 row-gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {
           features.map((features) => (
             <div className="md:px-12 sm:text-center md:text-center sm:px-0">

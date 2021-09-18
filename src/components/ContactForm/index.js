@@ -1,14 +1,22 @@
-import React from 'react'
+import React from 'react';
+import Aos from "aos";
+import "aos/dist/aos.css";
 
-function index() {
+function ContactForm() {
+  const [viewPortEntered] = React.useState(false);
+  React.useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
   return (
     <>
-      <div className="bg-gray-200 py-8" id="contact" style={{fontFamily: 'Roboto'}}>
+      <div className="bg-gray-200 py-8" id="contact" style={{ fontFamily: 'Roboto' }}>
         <section className="w-full max-w-2xl px-4 md:px-6 py-4 mx-auto">
-          <h2 className="text-2xl font-semibold sm:text-center text-left text-gray-800">Need a Project ?</h2>
-          <p className="mt-3 sm:text-center text-left text-gray-800 text-sm">Let us know what are you looking for in an agency. We will take a look and see if <br /> this could be the start of something beautiful.</p>
+          <div data-aos="flip-left">
+            <h2 className="text-2xl font-semibold sm:text-center text-left text-gray-800">Need a Project ?</h2>
+            <p className="mt-3 sm:text-center text-left text-gray-800 text-sm">Let us know what are you looking for in an agency. We will take a look and see if <br /> this could be the start of something beautiful.</p>
+          </div>
 
-          <div className="mt-6">
+          <div data-aos="flip-right" className="mt-6">
             <div className="items-center sm:-mx-2 md:flex">
               <div className="w-full sm:mx-2">
                 <input className="block w-full px-4 py-2 text-gray-700 border border-gray-300 rounded-md  focus:outline-none focus:ring" type="text" placeholder="Name" />
@@ -34,4 +42,4 @@ function index() {
     </>
   )
 }
-export default index;
+export default ContactForm;
