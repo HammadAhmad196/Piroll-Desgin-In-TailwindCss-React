@@ -1,17 +1,12 @@
 import React, { useEffect } from "react";
 import { FaEye } from "react-icons/fa";
 import gallery from "../../Data/Process/gallery";
-import Aos from "aos";
-import "aos/dist/aos.css";
 
 export const Gallery = () => {
-  const [viewPortEntered, setViewPortEntered] = React.useState(false);
-  React.useEffect(() => {
-    Aos.init({ duration: 2000 });
-  }, []);
+
   return (
     <div className="" style={{ fontFamily: 'Roboto' }}>
-      <div data-aos="flip-left" className="grid sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4">
         {
           gallery.map((gallery) => (
             <div>

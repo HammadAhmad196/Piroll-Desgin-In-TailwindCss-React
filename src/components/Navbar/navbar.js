@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from 'react-scroll';
 import { animateScroll as scroll } from "react-scroll";
 
 export default function Navbar({ fixed }) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
+
   return (
     <>
       <nav className="fixed flex z-50 w-full items-center justify-between sm:px-2 py-3 bg-gray-200" style={{ fontFamily: 'Roboto' }}>
